@@ -15,9 +15,11 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        const name = "venkat";
+        const user = {firstName: "Venkat", lastName: "Yashwanth"};
+        const user1 = {firstName: "Naveen", lastName: "Reddy"};
+        const fullName = user => user.firstName+" "+user.lastName;
         const className = "greeting";
-        const element = <h1 className={className}>Hello {name}!</h1>;
+        const element = <h1 className={className}>Hello {fullName(user1)}!</h1>;
         ReactDOM.render(element,document.getElementById("root"));
     </script>
 </body>
