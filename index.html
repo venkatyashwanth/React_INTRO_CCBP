@@ -14,20 +14,7 @@
 
 <body>
     <div id="root"></div>
-    <script type="text/babel">
-        const user = {firstName: "Venkat", lastName: "Yashwanth"};
-        const user1 = {firstName: "Naveen", lastName: "Reddy"};
-        const fullName = user => user.firstName+" "+user.lastName;
-        const className = "greeting";
-        // const element = <h1 className={className}>Hello {fullName(user1)}!</h1>;
-        const element = (
-            <div>
-                <h1 className={className}>Hello {fullName(user)}!</h1>
-                <p>Good to see your here.</p>    
-            </div>
-        )
-        ReactDOM.render(element,document.getElementById("root"));
-    </script>
+    <script type="text/babel" src="./script.js"></script>
 </body>
 
 </html>
