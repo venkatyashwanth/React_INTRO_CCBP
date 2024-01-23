@@ -1,12 +1,15 @@
-const user = { firstName: "Venkat", lastName: "Yashwanth" };
-const user1 = { firstName: "Naveen", lastName: "Reddy" };
-const fullName = user => user.firstName + " " + user.lastName;
-const className = "greeting";
-const element = (
+const Welcome = (props) => {
+    const { name, greeting } = props
+    return (<h1 className="message">{greeting}, {name}</h1>)
+}
+
+const Greetings = () => (
     <div>
-        <h1 className={className}>Hello {fullName(user1)}!</h1>
-        <p>Code from external JS File.</p>
-        <span>Note: Code will not run from local, you have to use server for this. </span>
+        <Welcome name="Venkat" greeting="Hello" />
+        <Welcome name="Naveen" greeting="Namasthe" />
     </div>
 )
-ReactDOM.render(element, document.getElementById("root"));
+
+ReactDOM.render(
+    <Greetings />
+    , document.getElementById("root"));
